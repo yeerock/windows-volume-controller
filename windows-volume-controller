@@ -1,0 +1,17 @@
+#SingleInstance, Force
+
+^Up::
+    Send {Volume_Up}
+    return
+
+^Down::
+    Send {Volume_Down}
+    return
+
+^Left::
+    Send {Volume_Mute}
+    return
+
+^Right::
+    Send {Volume_Mute}
+    return
