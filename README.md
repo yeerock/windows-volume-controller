@@ -4,10 +4,10 @@ This script allows you to control the volume of your system using keyboard short
 
 ### Functionality
 
-- Pressing `Ctrl + Up Arrow` increases the volume.
-- Pressing `Ctrl + Down Arrow` decreases the volume.
-- Pressing `Ctrl + Left Arrow` mutes the volume.
-- Pressing `Ctrl + Right Arrow` unmutes the volume.
+- Pressing `Win + Up Arrow` increases the volume.
+- Pressing `Win + Down Arrow` decreases the volume.
+- Pressing `Win + Left Arrow` mutes the volume.
+- Pressing `Win + Right Arrow` unmutes the volume.
 
 ### Setup
 
@@ -24,6 +24,8 @@ If you want the script to run automatically upon Windows startup:
 3. Type `shell:startup` and press Enter to open the Startup folder.
 4. Move the shortcut of the script to the Startup folder.
 
+Alternatively to put it simply, “C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp” is the location of the Startup folder for all users on Windows 11 and 10.
+
 ### Single Instance
 
 The script is designed to allow only one instance to run at a time using the `#SingleInstance` directive. This prevents multiple instances of the script from running simultaneously.
@@ -31,18 +33,19 @@ The script is designed to allow only one instance to run at a time using the `#S
 ```ahk
 #SingleInstance, Force
 
-^Up::
+#Up::
     Send {Volume_Up}
     return
 
-^Down::
+#Down::
     Send {Volume_Down}
     return
 
-^Left::
+#Left::
     Send {Volume_Mute}
     return
 
-^Right::
+#Right::
     Send {Volume_Mute}
     return
+
